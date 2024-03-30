@@ -23,6 +23,8 @@ Once that is over, PyPay uses polars to convert all the data into DataFrame, so 
 python3 -m pip install -r requirements.txt
 ```
 
+### How to start
+very easy: just run the main script: ```python3 main.py```
 
 #### Disclaimer:
 PyPay works only with "English" titled jobs. Translation will come soon and then more jobs will be available
