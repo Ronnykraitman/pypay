@@ -1,6 +1,6 @@
 # PyPay
 
-Weclome to PyPay, the one place for all Hi-Tech salaries
+Welcome to PyPay, the one place for all Hi-Tech salaries
 
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
