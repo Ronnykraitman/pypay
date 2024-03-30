@@ -18,6 +18,7 @@ Once that is over, PyPay uses polars to convert all the data into DataFrame, so 
 
 ### Requierments
 - python 3.10 or above
+- also, make sure you have pip installed (https://pypi.org/project/pip/)
 - please install the requiered packages before using. easily done by running
 ```
 python3 -m pip install -r requirements.txt
