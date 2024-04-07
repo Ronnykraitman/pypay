@@ -1,9 +1,6 @@
 # PyPay
 
 Welcome to PyPay, the one place for all Hi-Tech salaries
-
-![Alt Text](/extra/money.gif)
-
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
 ![Example GIF](/extra/money.gif)
