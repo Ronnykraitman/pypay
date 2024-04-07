@@ -4,32 +4,6 @@ import polars as pl
 from scrape.scraping_utils import convert_job_title_to_english, convert_string_range_to_list, _scrape, _get_df
 
 
-def scrape_speedigital(url: str):
-    columns = ["0-1 years", "1-2 years", "3-5 years", "Management"]
-    title_salary: dict = {}
-
-    soup = _scrape(url)
-    if not soup:
-        return pl.DataFrame()
-
-    tables = soup.find_all("tbody")
-
-    for table in tables:
-        job_row = table.find_all("tr")
-        for job in job_row:
-            salaries_as_list = []
-            job_cell = job.find_all("td")
-            job_title = job_cell[0].text
-            title_in_english = convert_job_title_to_english(job_title)
-            if title_in_english != "" and len(job_cell) == 5:
-                for i in range(1, len(job_cell)):
-                    salaries_as_list.append(convert_string_range_to_list(job_cell[i].text.strip()))
-
-                title_salary.update({title_in_english.title(): salaries_as_list})
-
-    return _get_df(columns, title_salary)
-
-
 def scrape_dialog(url: str):
     columns = ["0-2 years", "2-5 years", "5-10 years", "Management"]
     title_salary: dict = {}
@@ -97,6 +71,32 @@ def scrape_got_friends(url: str):
             for sal in salaries:
                 salaries_as_list.append(convert_string_range_to_list(sal.text.strip()))
             title_salary.update({title_in_english.title(): salaries_as_list})
+
+    return _get_df(columns, title_salary)
+
+
+def scrape_speedigital(url: str):
+    columns = ["0-1 years", "1-2 years", "3-5 years", "Management"]
+    title_salary: dict = {}
+
+    soup = _scrape(url)
+    if not soup:
+        return pl.DataFrame()
+
+    tables = soup.find_all("tbody")
+
+    for table in tables:
+        job_row = table.find_all("tr")
+        for job in job_row:
+            salaries_as_list = []
+            job_cell = job.find_all("td")
+            job_title = job_cell[0].text
+            title_in_english = convert_job_title_to_english(job_title)
+            if title_in_english != "" and len(job_cell) == 5:
+                for i in range(1, len(job_cell)):
+                    salaries_as_list.append(convert_string_range_to_list(job_cell[i].text.strip()))
+
+                title_salary.update({title_in_english.title(): salaries_as_list})
 
     return _get_df(columns, title_salary)
 

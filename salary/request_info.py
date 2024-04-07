@@ -18,9 +18,8 @@ def get_salary(dfs: list):
         print(salary_table)
         continue_selection = _continue_menu()
         if continue_selection == "Main menu":
-            from main import start
+            from pypay import start
             start(dfs)
-
 
 
 
@@ -43,7 +42,7 @@ def which_profession_pays_my_bills(dfs: list):
         print(matched_professions_table)
         continue_selection = _continue_menu()
         if continue_selection == "Main menu":
-            from main import start
+            from pypay import start
             start(dfs)
 
 
@@ -58,9 +57,8 @@ def search_profession_by_tags(dfs: list):
         print(job_by_tag_table)
         continue_selection = _continue_menu()
         if continue_selection == "Main menu":
-            from main import start
+            from pypay import start
             start(dfs)
-
 
 
 def _find_sal_in_job_seniority(row: pl.DataFrame, sal: int) -> dict:

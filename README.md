@@ -2,7 +2,10 @@
 
 Welcome to PyPay, the one place for all Hi-Tech salaries
 
+![Alt Text](/extra/money.gif)
+
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
 
 ### How it works
 PyPay scrapes in realtime couple of salary tables from top leading websites. 
@@ -25,7 +28,7 @@ python3 -m pip install -r requirements.txt
 ```
 
 ### How to start
-very easy: just run the main script: ```python3 main.py```
+very easy: just run the main script: ```python3 pypay.py```
 
 #### Disclaimer:
 PyPay works only with "English" titled jobs. Translation will come soon and then more jobs will be available
