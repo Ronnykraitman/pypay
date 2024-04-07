@@ -3,7 +3,7 @@
 Welcome to PyPay, the one place for all Hi-Tech salaries
 $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
-![Example GIF](/extra/money.gif)
+![Example GIF](/artifacts/money.gif)
 
 ### How it works
 PyPay scrapes in realtime couple of salary tables from top leading websites. 
